@@ -13,4 +13,4 @@ EXPOSE 4567
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["bundle", "exec", "ruby", "app.rb"]
+CMD ["bundle", "exec", "ruby", "app.rb", "-o", "0.0.0.0", "-p", "4567"]
