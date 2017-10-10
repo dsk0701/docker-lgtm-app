@@ -9,6 +9,7 @@ RUN git clone https://github.com/dsk0701/sinatra-app.git /app/docker-lgtm-app
 WORKDIR /app/docker-lgtm-app
 RUN bundle install
 
+VOLUME /app/docker-lgtm-app/public/images
 EXPOSE 4567
 
 COPY docker-entrypoint.sh /
