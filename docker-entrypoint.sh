@@ -8,7 +8,7 @@ export DEV_DATABASE_PASSWORD=${DB_PASSWORD:-dev}
 export DEV_DATABASE_USERNAME=${DB_USER:-root}
 export DEV_DATABASE_NAME=${DB_NAME:-lgtm}
 
-dockerize -wait tcp://${DEV_DATABASE_HOST}:${DEV_DATABASE_PORT} -timeout ${DB_BOOT_WAIT_TIMEOUT_SEC:-30s}
+dockerize -wait tcp://${DEV_DATABASE_HOST}:${DEV_DATABASE_PORT} -timeout ${DB_BOOT_WAIT_TIMEOUT:-30s}
 bundle exec rake db:create
 bundle exec rake db:migrate
 
